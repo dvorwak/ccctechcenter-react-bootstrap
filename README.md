@@ -1,5 +1,4 @@
-# Course Exchange Student Web Repo
-
+# California Community Colleges Tech Center Basic React Bootstrapper
 To get started:
 ```
 git clone https://github.com/ddvorak/ccctechcenter-react-bootstrap.git whatever_you_want_to_call_your_project
