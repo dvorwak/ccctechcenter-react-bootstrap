@@ -20,7 +20,7 @@ To run coverage:
 npm run coverage
 ```
 
-To run tests:
+To run tests (NOT IMPLEMENTED YET: see https://github.com/btholt/complete-intro-to-react/blob/master/js/Search.spec.js for example):
 ```
 npm run test
 ```
