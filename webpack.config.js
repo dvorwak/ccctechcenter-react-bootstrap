@@ -2,35 +2,56 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './js/App.jsx',
+  entry: './js/ClientApp.js',
+  devtool: 'eval',
   output: {
     path: path.join(__dirname, '/public'),
     filename: 'bundle.js'
   },
+  devServer: {
+    port: '1337',
+    publicPath: '/public/',
+    clientLogLevel: 'info',
+    historyApiFallback: true,
+    proxy: {
+    }
+  },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['.js', '.json']
   },
   stats: {
     colors: true,
     reasons: true,
-    chunks: false
+    chunks: true
   },
   module: {
-    preLoaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
+        enforce: 'pre',
+        test: /\.js$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
-      }
-    ],
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        loader: 'babel-loader'
+        include: path.resolve(__dirname, 'js')
       },
       {
         test: /\.json$/,
         loader: 'json-loader'
+      },
+      {
+        include: path.resolve(__dirname, 'js'),
+        test: /\.js$/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          }
+        ]
       }
     ]
   }

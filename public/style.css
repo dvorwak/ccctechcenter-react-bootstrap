@@ -1,0 +1,100 @@
+body {
+  background: #25469c url("./public/img/bg.png") no-repeat fixed;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+#app {
+  font-size: 0.875rem;
+}
+main {
+  background-color: #ffffff;
+  min-height: 400px;
+  padding-bottom: 110px;
+  padding-top: 50px;
+}
+.main-content {
+  padding: 15px 0 40px 0;
+}
+.panel {
+  border-color: #95989A;
+  border-radius: 0;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.11);
+}
+.navbar {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+span.ce-ribbon.success{
+  background-color: #2d862d;
+  border-color: #2d862d;
+}
+@media (max-width: 767px) {
+  main > .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main > .container .main-content {
+    padding: 15px 0 40px 0;
+  }
+  .hide-when-xs {
+    display: none;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  main > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .show-when-xs {
+    display: none;
+  }
+}
+
+@keyframes opacityAnimation {
+  12% {
+    opacity: 0.8;
+  }
+  19.5% {
+    opacity: 0.88;
+  }
+  37.2% {
+    opacity: 0.64;
+  }
+  40.5% {
+    opacity: 0.52;
+  }
+  52.7% {
+    opacity: 0.69;
+  }
+  60.2% {
+    opacity: 0.6;
+  }
+  66.6% {
+    opacity: 0.52;
+  }
+  70% {
+    opacity: 0.63;
+  }
+  79.9% {
+    opacity: 0.6;
+  }
+  84.2% {
+    opacity: 0.75;
+  }
+  91% {
+    opacity: 0.87;
+  }
+}
+
+@keyframes rotationAnimation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
